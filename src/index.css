@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +14,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hexagon {
+  width: var(--tw-space-hexSize);
+  height: calc(var(--tw-space-hexSize) * 0.866);
+  position: relative;
+  background-color: #ccc;
+  background-image: var(--tw-bg-hex-pattern);
+  background-size: var(--tw-bg-hex-pattern);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hexagon-inner {
+  transform: rotate(30deg);
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-30deg);
+}
+
+/* Add any additional styling for your hexagon here */
+
